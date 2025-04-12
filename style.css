@@ -1,0 +1,128 @@
+/* Root Theme Colors */
+:root {
+  --charleston-green: #232b24;   /* deep greenish-black */
+  --camel: #c19a6b;              /* soft leather tone */
+  --cream: #fdfcf8;              /* near-white for background */
+  --text: #222;
+  --subtle-gray: #777;
+}
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Merriweather', Georgia, serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 20px;
+
+}
+
+/* Layout Containers */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sidebar {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  background-color: #fff;
+  padding: 25px;
+  border-left: 6px solid var(--charleston-green);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.content {
+  flex: 2;
+  min-width: 300px;
+  background-color: #fff;
+  padding: 35px;
+  border-left: 6px solid var(--camel);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+/* Headings */
+h1 {
+  font-size: 2.2rem;
+  color: var(--charleston-green);
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: var(--charleston-green);
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--camel);
+  padding-bottom: 5px;
+}
+
+h3, h4 {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: var(--camel);
+}
+
+/* Typography */
+p {
+  margin-bottom: 12px;
+}
+
+ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Links */
+a {
+  color: var(--charleston-green);
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: var(--subtle-gray);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .sidebar, .content {
+    max-width: 100%;
+    border-left: none;
+    border-top: 6px solid var(--camel);
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
